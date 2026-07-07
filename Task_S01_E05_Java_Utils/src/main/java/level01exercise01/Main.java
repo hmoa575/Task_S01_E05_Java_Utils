@@ -8,7 +8,7 @@ public class Main {
             return;
         }
 
-        listDirectory("src/alphabet");
-
+        DirectoryLister lister = new DirectoryLister();
+        lister.listDirectory("src/alphabet");
     }
 }
