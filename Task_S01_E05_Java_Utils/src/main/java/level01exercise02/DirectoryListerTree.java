@@ -25,7 +25,7 @@ public class DirectoryListerTree {
         System.out.println("\n*******");
         listTreeRecursive(root, "");
     }
-    public void listTreeRecursive(File dir, String indent) {
+    private void listTreeRecursive(File dir, String indent) {
         File[] children = dir.listFiles();
         if (children == null) {
             return;
@@ -35,7 +35,7 @@ public class DirectoryListerTree {
             String type = child.isDirectory() ? "D":"F";
             String lastModified = DATE_FORMAT.format(new Date(child.lastModified()));
 
-            System.out.println(indent + " " + type + " " + child.getName() + " " + lastModified );
+            System.out.printf(indent + " " + type + " " + child.getName() + " " + lastModified );
 
             if(child.isDirectory()){ listTreeRecursive(child, indent + INDENT);}
         }
