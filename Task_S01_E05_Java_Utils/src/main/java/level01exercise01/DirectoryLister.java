@@ -21,7 +21,7 @@ public class DirectoryLister {
             System.out.println("The directory is empty.");
             return;
         }
-        Arrays.sort(contents);
+        Arrays.sort(contents, String.CASE_INSENSITIVE_ORDER);
         System.out.println("Content ordered alphabetically: ");
         for (String i : contents) {
             System.out.println(i);

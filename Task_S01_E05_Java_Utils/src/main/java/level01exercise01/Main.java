@@ -4,11 +4,11 @@ public class Main {
     public static void main(String[] args){
 
         if(args.length != 1){
-            System.out.println("Usage: " );
+            System.out.println("Usage: java Main <directory-path>" );
             return;
         }
 
         DirectoryLister lister = new DirectoryLister();
-        lister.listDirectory("src/alphabet");
+        lister.listDirectory(args[0]);
     }
 }
