@@ -10,7 +10,7 @@ import java.util.Date;
 public class DirectoryListerTreeSaveFile {
     private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-    public void listTreeToWritter(String directoryPath, PrintWriter out){
+    public void listTreeToWriter(String directoryPath, PrintWriter out){
         File root = new File(directoryPath);
 
         if(!root.exists()){

@@ -20,7 +20,7 @@ public class Main {
             System.exit(1);}
         }
     }
-    private void serializeCar(String fileName){
+    private static void serializeCar(String fileName){
         Car car = new Car("Tesla", "CyberTruck", 2024, 80000, "Silver");
 
         try(ObjectOutputStream objectOutS = new ObjectOutputStream(new FileOutputStream(fileName))){
@@ -32,7 +32,7 @@ public class Main {
             System.err.println(" ");
         }
     }
-    private void deserializeCar(String fileName){
+    private static void deserializeCar(String fileName){
         try(ObjectInputStream ObjectInputS = new ObjectInputStream(new FileInputStream(fileName))){
             Object object = ObjectInputS.readObject();
             if(object instanceof Car){
